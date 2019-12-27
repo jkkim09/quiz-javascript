@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <style>
+            #input-text {
+                width: 100%;
+                height: 50px;
+                font-size: 30px;
+            }
+            #test-button {
+                width: 100px;
+                height: 50px;
+            }
+        </style>
+        <script src="./quiz1.js"></script>
+    </head>
+    <body>
+        <input id="input-text" placeholder="입력값" value="abcabcabcabcabc">
+        <button id="test-button" onclick="testSend()">text</button>
+    </body>
+    <script>
+    function testSend() {
+        const inputText = document.getElementById('input-text').value;
+        const quizFunction = new quiz1();
+        quizFunction.testFunction(inputText);
+    }
+    </script>
+</html>

@@ -1,4 +1,4 @@
-# my-utils
+# QUIZ
 
 
 QUIZ 모음.

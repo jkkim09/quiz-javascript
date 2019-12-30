@@ -8,7 +8,7 @@ class quiz1 {
         this.re_count = this.text_length;
         for (a; a<=this.text_length; a++) {
             const encoder_text = this.stringSubstr(value, a);
-            console.log('encoder_text : ', encoder_text);
+            console.log('encoder_text ------------------------------- ', encoder_text);
         }
     }
 
@@ -41,7 +41,20 @@ class quiz1 {
                     }
                 }
             }
+            console.log(r, length);
             console.log('< ', select_text_count, select_text, ' >');
+            if (select_text_count === 1) {
+                if (r === 0) {
+                    
+                    return_text += select_text;
+                    console.log('test 1111111111',  select_text);
+                } else {
+                    return_text += (select_text.substr(length-1, 1));
+                    console.log('test 1111111111',  select_text);
+                }
+                
+            } else if (select_text_count > 1) {
+            }
         }
         this.re_count -= 1;
         return return_text;

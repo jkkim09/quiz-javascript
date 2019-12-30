@@ -6,22 +6,28 @@
                 height: 50px;
                 font-size: 30px;
             }
-            #test-button {
+            #test-button, #answer-button {
                 width: 100px;
                 height: 50px;
             }
         </style>
-        <script src="./quiz1-2.js"></script>
+        <script src="./quiz1-3.js"></script>
     </head>
     <body>
         <input id="input-text" placeholder="입력값" value="abcabcabcabcabc">
         <button id="test-button" onclick="testSend()">text</button>
+        <button id="answer-button" onclick="answer()">결과보기</button>
+        <div id="append"></div>
     </body>
     <script>
+    const quizFunction = new quiz1();
     function testSend() {
         const inputText = document.getElementById('input-text').value;
-        const quizFunction = new quiz1();
         quizFunction.testFunction(inputText);
+    }
+
+    function answer () {
+        alert(quizFunction.getAnswer().text);
     }
     </script>
 </html>

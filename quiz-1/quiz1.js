@@ -18,11 +18,16 @@ class quiz1 {
         for (b; b<re_number; b++) {
             let c = b+1;
             const select_text = text.substr(b, length);
+            let select_text_check_count = 0;
             console.log('선택 문자 ----------->',select_text);
             for (c; c<re_number; c++) {
                 const check_index_text = text.substr(c, length);
                 console.log('확인 문자 --->', check_index_text);
                 if (select_text === check_index_text) {
+                    select_text_check_count += 1;
+                } else {
+                    // console.log('count : ', select_text_check_count);
+                    // break;
                 }
             }
         }

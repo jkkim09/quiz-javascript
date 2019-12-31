@@ -1,12 +1,35 @@
 <html>
     <head>
         <style>
+            input {
+                width: 100%;
+                height: 50px;
+                font-size: 20px;
+            }
+            button {
+                width: 100px;
+                height: 50px;
+            }
+            #answer-area {
+                width: 100%;
+                height: 50px;
+                font-size: 30px;
+            }
         </style>
         <script src="./quiz2-1.js"></script>
     </head>
     <body>
+        <input id="button-q2" placeholder="입력" value="))((">
+        <button onclick="testQ2()">결과</button onclick="testQ2()">
+        <div id="answer-area"></div>
     </body>
     <script>
-    const quizFunction = new quiz2();
+        var area = document.getElementById('answer-area');
+        function testQ2() {
+           const input_value = document.getElementById('button-q2').value; 
+           var return_value = solution(input_value);
+           area.innerHTML = '';
+           area.innerHTML = return_value;
+        }
     </script>
 </html>

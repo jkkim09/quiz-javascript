@@ -24,6 +24,11 @@ function solution(p) {
                 end_index = i;
                 var length = end_index - start_index + 1;
                 if (p.substr(start_index, 1) === ')') {
+                    console.log('length : ', length);
+                    console.log('start : ', start_index);
+                    console.log('end : ', end_index);
+                    console.log('1 : ', length/2, length/2);
+                    console.log('2 : ', start_index, length/2)
                     add_text = p.substr(length/2, length/2) + p.substr(start_index, length/2);
                 } else {
                     add_text = p.substr(start_index, length);
